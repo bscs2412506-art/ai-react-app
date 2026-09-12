@@ -1,20 +1,13 @@
-type SidebarProps = {
-  onNavigate: (page: "dashboard" | "settings") => void;
-};
+import { NavLink } from "react-router-dom";
 
-export default function Sidebar({ onNavigate }: SidebarProps) {
+export default function Sidebar() {
   return (
     <aside>
       <h2>My Dashboard</h2>
 
       <nav>
-        <button onClick={() => onNavigate("dashboard")}>
-          Dashboard
-        </button>
-
-        <button onClick={() => onNavigate("settings")}>
-          Settings
-        </button>
+       <NavLink to="/">Dashboard</NavLink>
+<NavLink to="/settings">Settings</NavLink>
       </nav>
     </aside>
   );

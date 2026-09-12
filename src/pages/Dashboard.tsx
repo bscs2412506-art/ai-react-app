@@ -7,7 +7,7 @@ export default function Dashboard() {
 
       <p>Welcome back! Here's an overview of your account.</p>
 
-      <div>
+      <div className="stats-grid">
         <StatsCard
           title="Users"
           value="1,240"

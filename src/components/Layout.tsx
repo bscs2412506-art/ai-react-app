@@ -2,13 +2,12 @@ import Sidebar from "./Sidebar";
 
 type LayoutProps = {
   children: React.ReactNode;
-  onNavigate: (page: "dashboard" | "settings") => void;
 };
 
-export default function Layout({ children, onNavigate }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <div>
-      <Sidebar onNavigate={onNavigate} />
+      <Sidebar />
 
       <main>{children}</main>
     </div>
